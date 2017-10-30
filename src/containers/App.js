@@ -6,11 +6,12 @@ import todoAction from '../redux/todos/actions.js';
 
 const { initTodos } = todoAction;
 
+const fakeDelay = 1000;
 class App extends Component {
   componentDidMount() {
     setTimeout(async () => {
       this.props.initTodos();
-    }, 3000);
+    }, fakeDelay || 0);
   }
   render() {
     return (

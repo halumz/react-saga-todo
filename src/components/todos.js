@@ -15,14 +15,15 @@ const {
   showMore
 } = todoAction;
 
-const Todos = ({
-  todos,
-  allCompleted,
-  deleteCompleted,
-  showMore,
-  showAllenabled,
-  loading
-}) => {
+const Todos = props => {
+  const {
+    todos,
+    allCompleted,
+    deleteCompleted,
+    showMore,
+    showAllenabled,
+    loading
+  } = props;
   if (loading) {
     return <BlankCenterDiv text={<Loader />} />;
   }
@@ -39,7 +40,7 @@ const Todos = ({
           Delete Completed
         </button>
       </div>
-      {todos.map(todo => <Todo {...this.props} key={todo.id} todo={todo} />)}
+      {todos.map(todo => <Todo {...props} key={todo.id} todo={todo} />)}
       {showAllenabled && todos.length > 0 ? (
         <button
           type="button"
