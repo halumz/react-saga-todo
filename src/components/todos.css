@@ -24,6 +24,7 @@
   height: 500px;
 }
 .todoActions {
+  height: 5vh;
   margin-top: 20px;
   border-radius: 3px;
   display: flex;

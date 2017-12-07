@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Fork from '../components/fork';
 import NewTodo from '../components/newTodo';
 import Todos from '../components/todos';
 import todoAction from '../redux/todos/actions.js';
@@ -16,6 +17,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Fork />
         <NewTodo />
         <Todos />
       </div>

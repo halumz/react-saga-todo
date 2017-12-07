@@ -40,7 +40,9 @@ const Todos = props => {
           Delete Completed
         </button>
       </div>
-      {todos.map(todo => <Todo {...props} key={todo.id} todo={todo} />)}
+      <div style={{ height: '70vh', overflowY: 'auto', margin: '3px' }}>
+        {todos.map(todo => <Todo {...props} key={todo.id} todo={todo} />)}
+      </div>
       {showAllenabled && todos.length > 0 ? (
         <button
           type="button"
