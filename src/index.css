@@ -9,4 +9,5 @@ body {
 input::-webkit-input-placeholder,
 button {
   transition: all 0.3s ease-in-out;
+  outline: none;
 }
