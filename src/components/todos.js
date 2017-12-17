@@ -14,6 +14,7 @@ const {
   deleteCompleted,
   showMore
 } = todoAction;
+
 class Todos extends Component {
   componentWillReceiveProps(nextProps) {
     const newTodos = nextProps.todos;
